@@ -13,23 +13,19 @@ public class Main {
 
         System.out.println("Unesi 7 godina");
 
-        for(int i = 0 ; i< 7 ; i++){
+        for (int i = 0; i < 7; i++) {
             godine[i] = unosGodina.nextInt();
         }
 
-        for(int j = 0 ; j<7 ; j++){
-            if(godine[j] % 400 == 0){
-                System.out.println("godina "+ godine[j] + " je parna");
-            } else if (godine[j] % 100 == 0) {
-                System.out.println("godina "+ godine[j] + " je neparna");
-            } else if (godine[j] % 4 == 0) {
-                System.out.println("godina "+ godine[j] + " je parna");
+        for (int j = 0; j < 7; j++) {
+            if (godine[j] % 4 == 0 && godine[j] % 100 != 0) {
+                System.out.println("godina "+ godine[j] + " je prijestupna ");
+            } else if (godine[j] % 400 == 0) {
+                System.out.println("godina "+ godine[j] + " je prijestupna ");
             } else {
-                System.out.println("godina "+ godine[j] + " je neparna");
+                System.out.println("godina "+ godine[j] + " nije prijestupna ");
             }
         }
-
-
     }
 }
 
